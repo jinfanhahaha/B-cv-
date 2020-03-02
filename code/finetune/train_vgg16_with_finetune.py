@@ -22,6 +22,7 @@ with tf.Graph().as_default():
         loss = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(labels=y, logits=fc8))
         correct_prediction = tf.equal(tf.argmax(y, 1), tf.argmax(fc8, 1))
         accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
+
         variables_to_restore = []
         trainable_var_list = []
         for var in tf.global_variables():
