@@ -146,6 +146,6 @@ for class_index, class_name in enumerate(gt_classes):
     ap, mrec, mprec = voc_ap(rec, prec)
     sum_AP += ap
     print(class_name + " AP = {0:.2f}%".format(ap*100))
-    mAP = sum_AP / n_classes
-    print("mAP = {0:.2f}%".format(mAP * 100))
+mAP = sum_AP / n_classes
+print("mAP = {0:.2f}%".format(mAP * 100))
 shutil.rmtree(tmp_files_path)
